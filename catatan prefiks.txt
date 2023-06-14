@@ -1,8 +1,3 @@
-level user dan akses:
-`admin` : semua tabel termasuk tabel user, read/write
-guru: semua tabel kecuali tabel `hubungan` dan `ortu`, read/write
-`siswa`: tabel `siswa`, `riwayat_poin`, dan `kelas`
-
 aturan penamaan:
 nama komponen/file	prefiks
 
@@ -16,4 +11,5 @@ DataSource		Ds
 Edit			edt
 MaskEdit			msk
 Button			btn
+ComboBox		cbx
 

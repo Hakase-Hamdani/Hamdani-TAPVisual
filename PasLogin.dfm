@@ -1,9 +1,9 @@
 object frLogin: TfrLogin
   Left = 230
   Top = 225
-  Width = 359
+  Width = 335
   Height = 466
-  Caption = 'frLogin'
+  Caption = 'Login'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,32 +13,53 @@ object frLogin: TfrLogin
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object edtUserName: TEdit
-    Left = 56
+  object Label1: TLabel
+    Left = 125
+    Top = 128
+    Width = 70
+    Height = 13
+    Caption = 'Login Sebagai:'
+  end
+  object Label2: TLabel
+    Left = 21
     Top = 64
+    Width = 48
+    Height = 13
+    Caption = 'Username'
+  end
+  object Label3: TLabel
+    Left = 22
+    Top = 96
+    Width = 46
+    Height = 13
+    Caption = 'Password'
+  end
+  object edtUserName: TEdit
+    Left = 81
+    Top = 60
     Width = 217
     Height = 21
     TabOrder = 0
   end
   object MskPassword: TMaskEdit
-    Left = 56
-    Top = 96
+    Left = 81
+    Top = 92
     Width = 217
     Height = 21
     TabOrder = 1
   end
   object btnLogin: TButton
-    Left = 128
-    Top = 136
+    Left = 122
+    Top = 176
     Width = 75
     Height = 25
-    Caption = 'btnLogin'
+    Caption = 'Login'
     TabOrder = 2
     OnClick = btnLoginClick
   end
   object DbTest: TDBGrid
-    Left = 56
-    Top = 192
+    Left = 51
+    Top = 216
     Width = 217
     Height = 120
     DataSource = frConnection.DsLogin
@@ -78,5 +99,18 @@ object frLogin: TfrLogin
         Width = 40
         Visible = True
       end>
+  end
+  object cbxLevel: TComboBox
+    Left = 87
+    Top = 144
+    Width = 145
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 4
+    Text = '>--Pilih--<'
+    Items.Strings = (
+      'admin'
+      'guru'
+      'siswa')
   end
 end

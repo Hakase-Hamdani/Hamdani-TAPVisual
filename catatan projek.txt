@@ -6,5 +6,11 @@ guru: semua tabel kecuali tabel `hubungan` dan `ortu`, read/write
 commit dan comment di github:
 standarisasi mengunakan bahasa inggris
 
+struktur file
+>root
+>>file initial commit
+>>folder per form
+>>>>file per form
+
 catatan projek:
 Form:	frConnection:	Tempat penyimpanan semua komponen Zeos dan ADO/Data Access
