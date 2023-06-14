@@ -36,11 +36,11 @@ uses
 procedure TfrLogin.btnLoginClick(Sender: TObject);
 var
   nama, password, level, loginLevel, querylogin: string;
+  sts: integer;
 begin
   //cukup jelas
   nama := edtUserName.Text;
   password := MskPassword.Text;
-
   if cbxLevel.ItemIndex <> -1 then //jika ada item terpilih
     begin
       level := cbxLevel.Items[cbxLevel.ItemIndex]; //pilih item berdasarkan index sebagai string
@@ -61,25 +61,28 @@ begin
 
   if (frConnection.ZqLogin.RecordCount > 0) then //jika kueri di atas mengembalikan hasil
     begin
-      loginLevel := frConnection.ZqLogin.FieldValues['level']; //ambil value dari kolom `level` sebagai string
-      if (loginLevel = 'siswa') then //cukup jelas
+      sts := frConnection.ZqLogin.FieldValues['status']; //ambil value dari kolom `status`
+      if (sts = 1) then //memeriksa sts
         begin
-          ShowMessage('Login sebagai siswa'); //jalankan ini
+          loginLevel := frConnection.ZqLogin.FieldValues['level']; //ambil value dari kolom `level` sebagai string
+          if (loginLevel = 'siswa') then //memeriksa loginLevel
+            begin
+              ShowMessage('Login sebagai siswa');
+            end
+          else if (loginLevel = 'guru') then
+            begin
+              ShowMessage('Login sebagai guru');
+            end
+          else
+            begin
+              ShowMessage('Login sebagai admin');
+            end;
         end
-      else if (loginLevel = 'guru') then
+      else //jika tidak
         begin
-          ShowMessage('Login sebagai guru'); //jalankan ini
-        end
-      else
-        begin
-          ShowMessage('Login sebagai admin');
+          ShowMessage('Login Gagal'); //jalankan ini
         end;
-    end
-  else //jika tidak
-    begin
-      ShowMessage('Login Gagal'); //jalankan ini
     end;
-
 //  frConnection.ZqLogin.Close;
 end;
 
