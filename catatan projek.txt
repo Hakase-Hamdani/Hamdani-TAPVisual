@@ -1,0 +1,10 @@
+level user dan akses:
+`admin` : semua tabel termasuk tabel user, read/write
+guru: semua tabel kecuali tabel `hubungan` dan `ortu`, read/write
+`siswa`: tabel `siswa`, `riwayat_poin`, dan `kelas`
+
+commit dan comment di github:
+standarisasi mengunakan bahasa inggris
+
+catatan projek:
+Form:	frConnection:	Tempat penyimpanan semua komponen Zeos dan ADO/Data Access

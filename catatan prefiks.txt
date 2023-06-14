@@ -1,0 +1,19 @@
+level user dan akses:
+`admin` : semua tabel termasuk tabel user, read/write
+guru: semua tabel kecuali tabel `hubungan` dan `ortu`, read/write
+`siswa`: tabel `siswa`, `riwayat_poin`, dan `kelas`
+
+aturan penamaan:
+nama komponen/file	prefiks
+
+form			frNamForm
+file dfm/associated pas	Pas
+ZConnection		Z
+ZQuery			Zq
+DBGrid			Db
+DataSource		Ds
+
+Edit			edt
+MaskEdit			msk
+Button			btn
+
