@@ -9,7 +9,7 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TfrConnection, frConnection);
   Application.CreateForm(TfrLogin, frLogin);
+  Application.CreateForm(TfrConnection, frConnection);
   Application.Run;
 end.

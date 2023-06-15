@@ -6,6 +6,7 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 ### Saat ini sudah sampai:
  - [x] Form login
 	 - [x] validasi level
+		- [ ] need rework
 	 - [x] validasi status
  - [ ] Form menu siswa
 	 - [ ] Read

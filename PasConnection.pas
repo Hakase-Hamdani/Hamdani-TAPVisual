@@ -13,6 +13,9 @@ type
     ZConn: TZConnection;
     ZqLogin: TZQuery;
     GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    DsSiswa: TDataSource;
+    ZqSiswa: TZQuery;
   private
     { Private declarations }
   public

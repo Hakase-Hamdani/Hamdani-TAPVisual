@@ -41,13 +41,9 @@ begin
   //cukup jelas
   nama := edtUserName.Text;
   password := MskPassword.Text;
-  if cbxLevel.ItemIndex <> -1 then //jika ada item terpilih
-    begin
-      level := cbxLevel.Items[cbxLevel.ItemIndex]; //pilih item berdasarkan index sebagai string
-    end;
 
   //assign kueri ke variabel querylogin
-  querylogin := 'SELECT * FROM user WHERE nama = :nama AND `password` = :password AND `level` = :level';
+  querylogin := 'SELECT * FROM user WHERE nama = :nama AND `password` = :password';
 
   //clear properti SQL dan tambahkan querylogin
   frConnection.ZqLogin.SQL.Clear;
@@ -56,7 +52,6 @@ begin
   //bandingkan variabel 'nama' dan 'password' dengan kolom `nama` dan `password` di database
   frConnection.ZqLogin.ParamByName('nama').AsString := nama; //assign var 'nama' ke :nama di kueri
   frConnection.ZqLogin.ParamByName('password').AsString := password; //cukup jelas
-  frConnection.ZqLogin.ParamByName('level').AsString := level; //cukup jelas
   frConnection.ZqLogin.Open; //jalankan kueri dan cocokan dengan parameter di atas
 
   if (frConnection.ZqLogin.RecordCount > 0) then //jika kueri di atas mengembalikan hasil

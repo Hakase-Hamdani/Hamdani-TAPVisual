@@ -1,6 +1,6 @@
 object frConnection: TfrConnection
-  Left = 223
-  Top = 149
+  Left = 270
+  Top = 175
   Width = 232
   Height = 566
   Caption = 'frConnection'
@@ -21,6 +21,14 @@ object frConnection: TfrConnection
     Caption = 'Login'
     TabOrder = 0
   end
+  object GroupBox2: TGroupBox
+    Left = 16
+    Top = 200
+    Width = 185
+    Height = 105
+    Caption = 'Siswa'
+    TabOrder = 1
+  end
   object DsLogin: TDataSource
     DataSet = ZqLogin
     Left = 32
@@ -36,7 +44,7 @@ object frConnection: TfrConnection
     Connected = True
     HostName = 'localhost'
     Port = 3306
-    Database = 'data_sekolah'
+    Database = 'data_sekolah_rev'
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 
@@ -53,5 +61,15 @@ object frConnection: TfrConnection
     Params = <>
     Left = 96
     Top = 104
+  end
+  object DsSiswa: TDataSource
+    Left = 32
+    Top = 232
+  end
+  object ZqSiswa: TZQuery
+    Connection = ZConn
+    Params = <>
+    Left = 96
+    Top = 232
   end
 end
