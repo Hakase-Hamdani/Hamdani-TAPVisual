@@ -1,6 +1,6 @@
 object frLogin: TfrLogin
-  Left = 717
-  Top = 191
+  Left = 654
+  Top = 151
   Width = 335
   Height = 466
   Caption = 'Login'
@@ -13,13 +13,6 @@ object frLogin: TfrLogin
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 125
-    Top = 128
-    Width = 70
-    Height = 13
-    Caption = 'Login Sebagai:'
-  end
   object Label2: TLabel
     Left = 21
     Top = 64
@@ -33,6 +26,13 @@ object frLogin: TfrLogin
     Width = 46
     Height = 13
     Caption = 'Password'
+  end
+  object Label4: TLabel
+    Left = 78
+    Top = 176
+    Width = 164
+    Height = 13
+    Caption = 'The DataGrid is just for debugging'
   end
   object edtUserName: TEdit
     Left = 81
@@ -50,7 +50,7 @@ object frLogin: TfrLogin
   end
   object btnLogin: TButton
     Left = 122
-    Top = 176
+    Top = 128
     Width = 75
     Height = 25
     Caption = 'Login'
@@ -59,7 +59,7 @@ object frLogin: TfrLogin
   end
   object DbTest: TDBGrid
     Left = 51
-    Top = 216
+    Top = 200
     Width = 217
     Height = 120
     DataSource = frConnection.DsLogin
@@ -99,18 +99,5 @@ object frLogin: TfrLogin
         Width = 40
         Visible = True
       end>
-  end
-  object cbxLevel: TComboBox
-    Left = 87
-    Top = 144
-    Width = 145
-    Height = 21
-    ItemHeight = 13
-    TabOrder = 4
-    Text = '>--Pilih--<'
-    Items.Strings = (
-      'admin'
-      'guru'
-      'siswa')
   end
 end

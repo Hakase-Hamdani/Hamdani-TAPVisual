@@ -12,10 +12,9 @@ type
     MskPassword: TMaskEdit;
     btnLogin: TButton;
     DbTest: TDBGrid;
-    cbxLevel: TComboBox;
-    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
+    Label4: TLabel;
     procedure btnLoginClick(Sender: TObject);
   private
     { Private declarations }

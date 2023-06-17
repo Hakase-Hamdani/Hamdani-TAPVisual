@@ -6,7 +6,7 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 ### Saat ini sudah sampai:
  - [x] Form login
 	 - [x] validasi level
-		- [ ] need rework
+		- [x] need rework
 	 - [x] validasi status
  - [ ] Form menu siswa
 	 - [ ] Read
@@ -32,6 +32,7 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 |Nama Form|Fungsi  |
 |---------|--------|
 |`frConnection`|	Tempat penyimpanan semua komponen `Zeos` dan `ADO/Data Access`|
+|`frLogin`|	Form untuk login, use unit `frConnection`|
 
 ### Konvensi Penamaan
 *daftar ini belum selesai
