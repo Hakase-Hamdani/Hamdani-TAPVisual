@@ -23,7 +23,8 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 
 ### Struktur file/folder
 >**root**
->>file initial commit
+>>file initial commit\
+>>**folder per level user**\
 >>**folder per form**
 >>>file per form
 
@@ -33,12 +34,15 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 |---------|--------|
 |`frConnection`|	Tempat penyimpanan semua komponen `Zeos` dan `ADO/Data Access`|
 |`frLogin`|	Form untuk login, use unit `frConnection`|
+|`frDataDiri`|bagian dari `gfrSiswa` -> `ffrDataDiri`|
 
 ### Konvensi Penamaan
 *daftar ini belum selesai
 |nama komponen/file|prefiks|
 |------------------|-------|
 |**file dfm/associated pascal file**|Pas|
+|**Folder grup form**|gfr|
+|**Folder form**|ffr|
 |form|fr|
 |ZConnection|Z|
 |ZQuery|Zq|
@@ -48,6 +52,7 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 |MaskEdit|msk|
 |Button|btn|
 |ComboBox|cbx|
+|Memo|mm|
 
 ### Akses baca/tulis
 |level user|tabel akses|hal akses|
@@ -64,6 +69,4 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 
 
 
->Genuinely asking, why Delphi 7?
-
-
+>Genuinely asking, why Delphi 7?# Hakase-Hamdani
