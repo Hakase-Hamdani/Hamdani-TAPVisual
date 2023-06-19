@@ -1,6 +1,6 @@
 object frLogin: TfrLogin
-  Left = 717
-  Top = 191
+  Left = 375
+  Top = 180
   Width = 335
   Height = 466
   Caption = 'Login'
@@ -13,13 +13,6 @@ object frLogin: TfrLogin
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 125
-    Top = 128
-    Width = 70
-    Height = 13
-    Caption = 'Login Sebagai:'
-  end
   object Label2: TLabel
     Left = 21
     Top = 64
@@ -99,18 +92,5 @@ object frLogin: TfrLogin
         Width = 40
         Visible = True
       end>
-  end
-  object cbxLevel: TComboBox
-    Left = 87
-    Top = 144
-    Width = 145
-    Height = 21
-    ItemHeight = 13
-    TabOrder = 4
-    Text = '>--Pilih--<'
-    Items.Strings = (
-      'admin'
-      'guru'
-      'siswa')
   end
 end

@@ -12,8 +12,6 @@ type
     MskPassword: TMaskEdit;
     btnLogin: TButton;
     DbTest: TDBGrid;
-    cbxLevel: TComboBox;
-    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     procedure btnLoginClick(Sender: TObject);
@@ -29,7 +27,7 @@ var
 implementation
 
 uses
-  PasConnection, DB;
+  PasConnection, DB, PasFrAdmin;
 
 {$R *.dfm}
 
@@ -71,6 +69,7 @@ begin
           else
             begin
               ShowMessage('Login sebagai admin');
+              frAdmin.Show;
             end;
         end
       else //jika tidak

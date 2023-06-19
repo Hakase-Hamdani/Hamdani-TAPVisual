@@ -6,20 +6,19 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 ### Saat ini sudah sampai:
  - [x] Form login
 	 - [x] validasi level
-		- [] need rework
+		- [x] need rework
 	 - [x] validasi status
  - [ ] Form menu siswa
-	 - [ ] Read
+	 - [ ] Form lain akan ditambahkan seiring berjalannya waktu
  - [ ] Form menu guru
-	 - [ ] Create
-	 - [ ] Read
-	 - [ ] Update
-	 - [ ] Delete
+	 - [ ] Form lain akan ditambahkan seiring berjalannya waktu
  - [ ] form menu admin
-  	 - [ ] Create
-	 - [ ] Read
-	 - [ ] Update
-	 - [ ] Delete
+  	 - [x] Form Kelas **PARTIALLY**
+		- [x] Create **UNTESTED**
+		- [x] Read
+		- [x] Update **BROKEN**
+		- [x] Delete **UNTESTED**
+	 - [ ] Form lain akan ditambahkan seiring berjalannya waktu
 
 ### Struktur file/folder
 >**root**
@@ -34,7 +33,9 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 |---------|--------|
 |`frConnection`|	Tempat penyimpanan semua komponen `Zeos` dan `ADO/Data Access`|
 |`frLogin`|	Form untuk login, use unit `frConnection`|
-|`frDataDiri`|bagian dari `gfrSiswa` -> `ffrDataDiri` **ON HOLD**|
+|`frDataDiri`|bagian dari `gfrSiswa`-> `ffrDataDiri` **ON HOLD**|
+|`frAdmin`|bagian dari `gfrAdmin`, berfungsi sebagai panel administrasi untuk user `admin`|
+|`frKelasAdmin`|bagian dari `gfrAdmin`-> `ffrKelas`, berfungsi sebagai form CRUD data kelas untuk user `admin`|
 
 ### Konvensi Penamaan
 *daftar ini belum selesai

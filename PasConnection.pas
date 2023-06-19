@@ -16,6 +16,10 @@ type
     GroupBox2: TGroupBox;
     DsSiswa: TDataSource;
     ZqSiswa: TZQuery;
+    GroupBox3: TGroupBox;
+    GroupBox4: TGroupBox;
+    DsKelasAdmin: TDataSource;
+    ZqKelasAdmin: TZQuery;
   private
     { Private declarations }
   public

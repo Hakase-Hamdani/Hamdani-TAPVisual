@@ -1,7 +1,7 @@
 object frConnection: TfrConnection
-  Left = 270
-  Top = 175
-  Width = 232
+  Left = 611
+  Top = 204
+  Width = 731
   Height = 566
   Caption = 'frConnection'
   Color = clBtnFace
@@ -28,6 +28,22 @@ object frConnection: TfrConnection
     Height = 105
     Caption = 'Siswa'
     TabOrder = 1
+  end
+  object GroupBox3: TGroupBox
+    Left = 232
+    Top = 72
+    Width = 465
+    Height = 233
+    Caption = 'Admin'
+    TabOrder = 2
+    object GroupBox4: TGroupBox
+      Left = 8
+      Top = 16
+      Width = 185
+      Height = 105
+      Caption = 'Kelas'
+      TabOrder = 0
+    end
   end
   object DsLogin: TDataSource
     DataSet = ZqLogin
@@ -71,5 +87,19 @@ object frConnection: TfrConnection
     Params = <>
     Left = 96
     Top = 232
+  end
+  object DsKelasAdmin: TDataSource
+    DataSet = ZqKelasAdmin
+    Left = 280
+    Top = 120
+  end
+  object ZqKelasAdmin: TZQuery
+    Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM kelas')
+    Params = <>
+    Left = 352
+    Top = 120
   end
 end
