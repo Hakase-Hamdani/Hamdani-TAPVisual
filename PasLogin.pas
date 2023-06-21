@@ -16,6 +16,7 @@ type
     Label3: TLabel;
     Label1: TLabel;
     procedure btnLoginClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,7 +71,7 @@ begin
           else
             begin
               ShowMessage('Login sebagai admin');
-              frAdmin.Show;
+              frAdmin.ShowModal;
             end;
         end
       else //jika tidak
@@ -79,6 +80,11 @@ begin
         end;
     end;
 //  frConnection.ZqLogin.Close;
+end;
+
+procedure TfrLogin.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

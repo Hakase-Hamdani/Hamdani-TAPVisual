@@ -21,6 +21,7 @@ type
     Button7: TButton;
     procedure btnAdminKelasClick(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,6 +46,11 @@ end;
 procedure TfrAdmin.Button4Click(Sender: TObject);
 begin
 frUserAdmin.ShowModal;
+end;
+
+procedure TfrAdmin.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.

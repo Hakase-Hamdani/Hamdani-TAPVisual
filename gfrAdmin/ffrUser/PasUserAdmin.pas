@@ -101,15 +101,15 @@ else
   ShowMessage('error');
 
 stsSelect := cbxSts.Text;
-if (stsSelect := '1') then
+if (stsSelect = '1') then
   stsQ := 1
-else if (stsSelect := '0' then
+else if (stsSelect = '0') then
   stsQ := 0
 else
   ShowMessage('error');
 
 frConnection.ZqUserAdmin.SQL.Clear;
-frConnection.ZqUserAdmin.SQL.Add('INSERT INTO user VALUES(null, "'+edtNm.Text+'", "'+edtPswd.Text+'", "'+lvlQ+'", "'+stsQ+'")');
+frConnection.ZqUserAdmin.SQL.Add('INSERT INTO user VALUES(null, "'+edtNm.Text+'", "'+edtPswd.Text+'", "'+lvlQ+'", "'+IntToStr(stsQ)+'")');
 frConnection.ZqUserAdmin.ExecSQL;
 
 frConnection.ZqKelasAdmin.SQL.Clear;
@@ -133,15 +133,15 @@ else
   ShowMessage('error');
 
 stsSelect := cbxStsEdit.Text;
-if (stsSelect := '1') then
+if (stsSelect = '1') then
   stsQ := 1
-else if (stsSelect := '0' then
+else if (stsSelect = '0') then
   stsQ := 0
 else
   ShowMessage('error');
 
 frConnection.ZqUserAdmin.SQL.Clear;
-frConnection.ZqUserAdmin.SQL.Add('UPDATE user SET nama="'+edtNmEdit.Text+'", password="'+edtPswdEdit.Text+'", level="'+lvlQ+'", status="'+stsQ+'" WHERE id="'+id+'")');
+frConnection.ZqUserAdmin.SQL.Add('UPDATE user SET nama="'+edtNmEdit.Text+'", password="'+edtPswdEdit.Text+'", level="'+lvlQ+'", status="'+IntToStr(stsQ)+'" WHERE id="'+id+'")');
 frConnection.ZqUserAdmin.ExecSQL;
 
 frConnection.ZqKelasAdmin.SQL.Clear;

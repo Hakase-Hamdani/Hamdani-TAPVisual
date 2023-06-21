@@ -23,6 +23,7 @@ type
     GroupBox5: TGroupBox;
     DsUserAdmin: TDataSource;
     ZqUserAdmin: TZQuery;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,5 +36,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrConnection.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
+end;
 
 end.

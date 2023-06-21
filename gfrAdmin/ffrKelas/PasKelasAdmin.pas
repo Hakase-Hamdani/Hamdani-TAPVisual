@@ -33,6 +33,7 @@ type
     procedure DbKelasAdminCellClick(Column: TColumn);
     procedure btnEditKlsClick(Sender: TObject);
     procedure btnHpsClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -97,6 +98,11 @@ id := frConnection.ZqKelasAdmin.Fields[0].AsString;
 edtEditKls.Text := frConnection.ZqKelasAdmin.Fields[1].AsString;
 edtEditJenisKls.Text := frConnection.ZqKelasAdmin.Fields[2].AsString;
 edtEditJrsKls.Text := frConnection.ZqKelasAdmin.Fields[3].AsString;
+end;
+
+procedure TfrKelasAdmin.FormCreate(Sender: TObject);
+begin
+Position := poScreenCenter;
 end;
 
 end.
