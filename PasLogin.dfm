@@ -1,6 +1,6 @@
 object frLogin: TfrLogin
-  Left = 375
-  Top = 180
+  Left = 509
+  Top = 228
   Width = 335
   Height = 466
   Caption = 'Login'
@@ -14,36 +14,43 @@ object frLogin: TfrLogin
   PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
-    Left = 21
-    Top = 64
+    Left = 13
+    Top = 80
     Width = 48
     Height = 13
     Caption = 'Username'
   end
   object Label3: TLabel
-    Left = 22
-    Top = 96
+    Left = 14
+    Top = 112
     Width = 46
     Height = 13
     Caption = 'Password'
   end
+  object Label1: TLabel
+    Left = 47
+    Top = 207
+    Width = 225
+    Height = 13
+    Caption = 'the datagrid is just for debugging purpose only'
+  end
   object edtUserName: TEdit
-    Left = 81
-    Top = 60
+    Left = 73
+    Top = 76
     Width = 217
     Height = 21
     TabOrder = 0
   end
   object MskPassword: TMaskEdit
-    Left = 81
-    Top = 92
+    Left = 73
+    Top = 108
     Width = 217
     Height = 21
     TabOrder = 1
   end
   object btnLogin: TButton
     Left = 122
-    Top = 176
+    Top = 152
     Width = 75
     Height = 25
     Caption = 'Login'
@@ -52,7 +59,7 @@ object frLogin: TfrLogin
   end
   object DbTest: TDBGrid
     Left = 51
-    Top = 216
+    Top = 232
     Width = 217
     Height = 120
     DataSource = frConnection.DsLogin

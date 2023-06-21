@@ -14,6 +14,7 @@ type
     DbTest: TDBGrid;
     Label2: TLabel;
     Label3: TLabel;
+    Label1: TLabel;
     procedure btnLoginClick(Sender: TObject);
   private
     { Private declarations }

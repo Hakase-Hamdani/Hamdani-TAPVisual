@@ -20,6 +20,9 @@ type
     GroupBox4: TGroupBox;
     DsKelasAdmin: TDataSource;
     ZqKelasAdmin: TZQuery;
+    GroupBox5: TGroupBox;
+    DsUserAdmin: TDataSource;
+    ZqUserAdmin: TZQuery;
   private
     { Private declarations }
   public

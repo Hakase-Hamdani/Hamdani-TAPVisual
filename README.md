@@ -18,6 +18,11 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 		- [x] Read
 		- [x] Update **BROKEN**
 		- [x] Delete **UNTESTED**
+	 - [x] Form User **PARTIALLY**
+		- [x] Create **UNTESTED**
+		- [x] Read
+		- [x] Update **BROKEN**
+		- [x] Delete **UNTESTED**
 	 - [ ] Form lain akan ditambahkan seiring berjalannya waktu
 
 ### Struktur file/folder
@@ -36,6 +41,7 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 |`frDataDiri`|bagian dari `gfrSiswa`-> `ffrDataDiri` **ON HOLD**|
 |`frAdmin`|bagian dari `gfrAdmin`, berfungsi sebagai panel administrasi untuk user `admin`|
 |`frKelasAdmin`|bagian dari `gfrAdmin`-> `ffrKelas`, berfungsi sebagai form CRUD data kelas untuk user `admin`|
+|`frUserAdmin`|bagian dari `gfrAdmin`-> `ffrUser`, berfungsi sebagai form CRUD data user|
 
 ### Konvensi Penamaan
 *daftar ini belum selesai

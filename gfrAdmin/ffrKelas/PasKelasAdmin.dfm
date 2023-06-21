@@ -1,8 +1,8 @@
 object frKelasAdmin: TfrKelasAdmin
-  Left = 242
-  Top = 158
-  Width = 639
-  Height = 560
+  Left = 660
+  Top = 168
+  Width = 525
+  Height = 480
   Caption = 'frKelasAdmin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -29,9 +29,9 @@ object frKelasAdmin: TfrKelasAdmin
   end
   object GroupBox1: TGroupBox
     Left = 24
-    Top = 32
-    Width = 257
-    Height = 217
+    Top = 16
+    Width = 217
+    Height = 201
     Caption = 'Edit Data'
     TabOrder = 0
     object Label1: TLabel
@@ -56,29 +56,29 @@ object frKelasAdmin: TfrKelasAdmin
       Caption = 'Jurusan'
     end
     object edtEditKls: TEdit
-      Left = 112
+      Left = 80
       Top = 32
       Width = 121
       Height = 21
       TabOrder = 0
     end
     object edtEditJenisKls: TEdit
-      Left = 112
+      Left = 80
       Top = 72
       Width = 121
       Height = 21
       TabOrder = 1
     end
     object edtEditJrsKls: TEdit
-      Left = 112
+      Left = 80
       Top = 114
       Width = 121
       Height = 21
       TabOrder = 2
     end
     object btnEditKls: TButton
-      Left = 91
-      Top = 168
+      Left = 71
+      Top = 160
       Width = 75
       Height = 25
       Caption = 'EDIT DATA'
@@ -87,10 +87,10 @@ object frKelasAdmin: TfrKelasAdmin
     end
   end
   object frAdminKelas: TGroupBox
-    Left = 328
-    Top = 32
-    Width = 257
-    Height = 217
+    Left = 248
+    Top = 24
+    Width = 233
+    Height = 193
     Caption = 'Tambah Data'
     TabOrder = 1
     object Label7: TLabel
@@ -115,29 +115,29 @@ object frKelasAdmin: TfrKelasAdmin
       Caption = 'Jurusan'
     end
     object edtNamaKls: TEdit
-      Left = 112
+      Left = 96
       Top = 32
       Width = 121
       Height = 21
       TabOrder = 0
     end
     object edtJenis: TEdit
-      Left = 112
+      Left = 96
       Top = 72
       Width = 121
       Height = 21
       TabOrder = 1
     end
     object edtJrsKls: TEdit
-      Left = 112
+      Left = 96
       Top = 114
       Width = 121
       Height = 21
       TabOrder = 2
     end
     object btnTambahKls: TButton
-      Left = 76
-      Top = 168
+      Left = 64
+      Top = 152
       Width = 105
       Height = 25
       Caption = 'TAMBAHKAN DATA'
@@ -146,10 +146,10 @@ object frKelasAdmin: TfrKelasAdmin
     end
   end
   object DbKelasAdmin: TDBGrid
-    Left = 231
-    Top = 272
+    Left = 127
+    Top = 232
     Width = 353
-    Height = 233
+    Height = 177
     DataSource = frConnection.DsKelasAdmin
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
@@ -186,16 +186,16 @@ object frKelasAdmin: TfrKelasAdmin
   end
   object GroupBox2: TGroupBox
     Left = 32
-    Top = 336
-    Width = 185
-    Height = 105
+    Top = 249
+    Width = 89
+    Height = 81
     Caption = 'HAPUS DATA'
     Color = clRed
     ParentColor = False
     TabOrder = 3
     object btnHps: TButton
-      Left = 55
-      Top = 40
+      Left = 7
+      Top = 28
       Width = 75
       Height = 25
       Caption = 'HAPUS DATA'

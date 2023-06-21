@@ -5,7 +5,8 @@ uses
   PasConnection in 'PasConnection.pas' {frConnection},
   PasLogin in 'PasLogin.pas' {frLogin},
   PasKelasAdmin in 'gfrAdmin\ffrKelas\PasKelasAdmin.pas' {frKelasAdmin},
-  PasFrAdmin in 'gfrAdmin\PasFrAdmin.pas' {frAdmin};
+  PasFrAdmin in 'gfrAdmin\PasFrAdmin.pas' {frAdmin},
+  PasUserAdmin in 'gfrAdmin\ffrUser\PasUserAdmin.pas' {frUserAdmin};
 
 {$R *.res}
 
@@ -15,5 +16,6 @@ begin
   Application.CreateForm(TfrConnection, frConnection);
   Application.CreateForm(TfrKelasAdmin, frKelasAdmin);
   Application.CreateForm(TfrAdmin, frAdmin);
+  Application.CreateForm(TfrUserAdmin, frUserAdmin);
   Application.Run;
 end.

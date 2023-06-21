@@ -20,6 +20,7 @@ type
     btnAdminKelas: TButton;
     Button7: TButton;
     procedure btnAdminKelasClick(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,13 +33,18 @@ var
 implementation
 
 uses
-  PasKelasAdmin;
+  PasKelasAdmin, PasUserAdmin;
 
 {$R *.dfm}
 
 procedure TfrAdmin.btnAdminKelasClick(Sender: TObject);
 begin
 frKelasAdmin.ShowModal;
+end;
+
+procedure TfrAdmin.Button4Click(Sender: TObject);
+begin
+frUserAdmin.ShowModal;
 end;
 
 end.

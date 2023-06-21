@@ -1,6 +1,6 @@
 object frAdmin: TfrAdmin
-  Left = 211
-  Top = 191
+  Left = 923
+  Top = 196
   Width = 527
   Height = 324
   Caption = 'frAdmin'
@@ -72,6 +72,7 @@ object frAdmin: TfrAdmin
       Height = 25
       Caption = 'User'
       TabOrder = 0
+      OnClick = Button4Click
     end
   end
   object GroupBox3: TGroupBox

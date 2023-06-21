@@ -1,7 +1,7 @@
 object frConnection: TfrConnection
-  Left = 611
-  Top = 204
-  Width = 731
+  Left = 181
+  Top = 165
+  Width = 730
   Height = 566
   Caption = 'frConnection'
   Color = clBtnFace
@@ -33,7 +33,7 @@ object frConnection: TfrConnection
     Left = 232
     Top = 72
     Width = 465
-    Height = 233
+    Height = 281
     Caption = 'Admin'
     TabOrder = 2
     object GroupBox4: TGroupBox
@@ -43,6 +43,14 @@ object frConnection: TfrConnection
       Height = 105
       Caption = 'Kelas'
       TabOrder = 0
+    end
+    object GroupBox5: TGroupBox
+      Left = 8
+      Top = 136
+      Width = 185
+      Height = 105
+      Caption = 'GroupBox5'
+      TabOrder = 1
     end
   end
   object DsLogin: TDataSource
@@ -101,5 +109,19 @@ object frConnection: TfrConnection
     Params = <>
     Left = 352
     Top = 120
+  end
+  object DsUserAdmin: TDataSource
+    DataSet = ZqUserAdmin
+    Left = 272
+    Top = 240
+  end
+  object ZqUserAdmin: TZQuery
+    Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM user')
+    Params = <>
+    Left = 352
+    Top = 240
   end
 end
