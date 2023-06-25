@@ -23,6 +23,9 @@ type
     GroupBox5: TGroupBox;
     DsUserAdmin: TDataSource;
     ZqUserAdmin: TZQuery;
+    GroupBox6: TGroupBox;
+    ZqPoinAdmin: TZQuery;
+    DsPoinAdmin: TDataSource;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

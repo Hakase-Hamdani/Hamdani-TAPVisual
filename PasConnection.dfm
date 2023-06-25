@@ -1,6 +1,6 @@
 object frConnection: TfrConnection
-  Left = 181
-  Top = 165
+  Left = 236
+  Top = 169
   Width = 730
   Height = 566
   Caption = 'frConnection'
@@ -52,6 +52,14 @@ object frConnection: TfrConnection
       Height = 105
       Caption = 'GroupBox5'
       TabOrder = 1
+    end
+    object GroupBox6: TGroupBox
+      Left = 200
+      Top = 16
+      Width = 185
+      Height = 105
+      Caption = 'Poin'
+      TabOrder = 2
     end
   end
   object DsLogin: TDataSource
@@ -124,5 +132,19 @@ object frConnection: TfrConnection
     Params = <>
     Left = 352
     Top = 240
+  end
+  object ZqPoinAdmin: TZQuery
+    Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM poin')
+    Params = <>
+    Left = 552
+    Top = 120
+  end
+  object DsPoinAdmin: TDataSource
+    DataSet = ZqPoinAdmin
+    Left = 464
+    Top = 120
   end
 end
