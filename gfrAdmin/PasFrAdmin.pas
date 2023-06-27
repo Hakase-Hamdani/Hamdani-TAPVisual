@@ -22,6 +22,7 @@ type
     procedure btnAdminKelasClick(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,7 +35,7 @@ var
 implementation
 
 uses
-  PasKelasAdmin, PasUserAdmin;
+  PasKelasAdmin, PasUserAdmin, PasPoinAdmin;
 
 {$R *.dfm}
 
@@ -51,6 +52,11 @@ end;
 procedure TfrAdmin.FormCreate(Sender: TObject);
 begin
 Position := poScreenCenter;
+end;
+
+procedure TfrAdmin.Button7Click(Sender: TObject);
+begin
+frPoinAdmin.ShowModal;
 end;
 
 end.

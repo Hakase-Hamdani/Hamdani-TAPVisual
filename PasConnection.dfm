@@ -1,8 +1,8 @@
 object frConnection: TfrConnection
-  Left = 236
-  Top = 169
+  Left = 153
+  Top = 372
   Width = 730
-  Height = 566
+  Height = 432
   Caption = 'frConnection'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

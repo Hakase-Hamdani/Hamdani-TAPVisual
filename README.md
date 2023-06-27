@@ -23,6 +23,8 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 		- [x] Read
 		- [x] Update **BROKEN**
 		- [x] Delete **UNTESTED**
+	 - [x] Form POIN **NOT CODED YET**
+	 - [x] Form Ortu **NOT CODED YET**
 	 - [ ] Form lain akan ditambahkan seiring berjalannya waktu
 
 ### Struktur file/folder
@@ -42,6 +44,8 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 |`frAdmin`|bagian dari `gfrAdmin`, berfungsi sebagai panel administrasi untuk user `admin`|
 |`frKelasAdmin`|bagian dari `gfrAdmin`-> `ffrKelas`, berfungsi sebagai form CRUD data kelas untuk user `admin`|
 |`frUserAdmin`|bagian dari `gfrAdmin`-> `ffrUser`, berfungsi sebagai form CRUD data user|
+|`frPoinAdmin`|bagian dari `gfrAdmin`-> `ffrPoin`, berfungsi sebagai form CRUD data poin|
+|`frOrtuAdmin`|bagian dari `gfrAdmin`->`ffrOrtu`, berfungsi sebagai form CRUD data ortu|
 
 ### Konvensi Penamaan
 *daftar ini belum selesai

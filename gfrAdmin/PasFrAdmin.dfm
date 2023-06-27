@@ -1,6 +1,6 @@
 object frAdmin: TfrAdmin
-  Left = 528
-  Top = 188
+  Left = 257
+  Top = 269
   Width = 527
   Height = 324
   Caption = 'frAdmin'
@@ -107,6 +107,7 @@ object frAdmin: TfrAdmin
       Height = 25
       Caption = 'Poin'
       TabOrder = 2
+      OnClick = Button7Click
     end
   end
 end
