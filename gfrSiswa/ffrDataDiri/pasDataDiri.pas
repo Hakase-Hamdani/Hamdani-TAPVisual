@@ -8,10 +8,21 @@ uses
 
 type
   TfrDatadiri = class(TForm)
-    mmDataDiri: TMemo;
-    DBGrid1: TDBGrid;
+    edtUserId: TEdit;
     Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    edtNm: TEdit;
+    edtNis: TEdit;
+    edtTk: TEdit;
+    edtJur: TEdit;
+    edtWk: TEdit;
+    btnRep: TButton;
     procedure FormCreate(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,31 +35,36 @@ var
 implementation
 
 uses
-  PasConnection, PasLogin;
+  PasConnection, PasLogin, DB;
 
 {$R *.dfm}
 
 procedure TfrDatadiri.FormCreate(Sender: TObject);
 var
-  querySiswa, queryOrtu, queryKelas:string;
-  user_idDD: integer;
+  userid : string;
 begin
-  user_idDD := PasLogin.user_id;
-  Label1.Caption := IntToStr(PasLogin.user_id);
-  querySiswa := 'SELECT * FROM siswa WHERE user_id = :user_id';
-//  ShowMessage(IntToStr(user_id));
-frConnection.ZqDataSiswa.SQL.Clear;
-frConnection.ZqDataSiswa.SQL.Add(querySiswa);
-if frConnection.ZqDataSiswa.Params.FindParam('user_id') <> nil then
-  begin
-    frConnection.ZqDataSiswa.ParamByName('user_id').AsInteger := user_idDD;
-    frConnection.ZqDataSiswa.SQL.Clear;
-    frConnection.ZqDataSiswa.SQL.Add('SELECT * FROM siswa WHERE user_id = "'+inttostr(user_idDD)+'"');
-  end
-else
-  begin
-    ShowMessage('Param is NOT found, fuck!');
-  end;
+  userid := frLogin.lblId.Caption;
+  edtUserId.Text := userid;
+end;
+
+procedure TfrDatadiri.FormActivate(Sender: TObject);
+var
+  query, userid : string;
+begin
+  userid := frLogin.lblId.Caption;
+  edtUserId.Text := userid;
+
+  query := 'SELECT * FROM siswa WHERE user_id = :userid';
+  frConnection.ZqSiswa.SQL.Clear;
+  frConnection.ZqSiswa.SQL.Add(query);
+  frConnection.ZqSiswa.ParamByName('userid').AsString := userid;
+  frConnection.ZqSiswa.Open;
+
+  edtNm.Text := frConnection.ZqSiswa.FieldByName('nama_siswa').AsString;
+  edtNis.Text := frConnection.ZqSiswa.FieldByName('nis').AsString;
+  edtTk.Text := frConnection.ZqSiswa.FieldByName('tingkat_kelas').AsString;
+  edtJur.Text := frConnection.ZqSiswa.FieldByName('jurusan').AsString;
+  edtWk.Text := frConnection.ZqSiswa.FieldByName('wali_kelas').AsString;
 
 end;
 

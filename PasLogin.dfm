@@ -1,6 +1,6 @@
 object frLogin: TfrLogin
-  Left = 269
-  Top = 139
+  Left = 231
+  Top = 163
   Width = 335
   Height = 466
   Caption = 'Login'
@@ -34,6 +34,14 @@ object frLogin: TfrLogin
     Width = 225
     Height = 13
     Caption = 'the datagrid is just for debugging purpose only'
+  end
+  object lblId: TLabel
+    Left = 16
+    Top = 376
+    Width = 3
+    Height = 13
+    Transparent = True
+    Visible = False
   end
   object edtUserName: TEdit
     Left = 73

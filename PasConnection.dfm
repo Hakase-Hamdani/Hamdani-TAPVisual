@@ -1,6 +1,6 @@
 object frConnection: TfrConnection
-  Left = 153
-  Top = 372
+  Left = 45
+  Top = 135
   Width = 730
   Height = 432
   Caption = 'frConnection'
