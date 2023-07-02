@@ -45,6 +45,7 @@ var
 begin
   userid := frLogin.lblId.Caption;
   edtUserId.Text := userid;
+  Position := poScreenCenter;
 end;
 
 procedure TfrDatadiri.FormActivate(Sender: TObject);

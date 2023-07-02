@@ -1,6 +1,6 @@
 object frDatadiri: TfrDatadiri
-  Left = 600
-  Top = 220
+  Left = 446
+  Top = 213
   Width = 379
   Height = 296
   Caption = 'frDatadiri'
@@ -64,8 +64,8 @@ object frDatadiri: TfrDatadiri
     Caption = 'Wali Kelas:'
   end
   object edtUserId: TEdit
-    Left = 224
-    Top = 184
+    Left = 24
+    Top = 224
     Width = 121
     Height = 21
     ReadOnly = True
