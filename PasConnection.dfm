@@ -1,6 +1,6 @@
 object frConnection: TfrConnection
-  Left = 45
-  Top = 135
+  Left = 184
+  Top = 151
   Width = 730
   Height = 432
   Caption = 'frConnection'
@@ -26,7 +26,7 @@ object frConnection: TfrConnection
     Left = 16
     Top = 200
     Width = 185
-    Height = 105
+    Height = 153
     Caption = 'Siswa'
     TabOrder = 1
   end
@@ -101,6 +101,9 @@ object frConnection: TfrConnection
   end
   object ZqSiswa: TZQuery
     Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      'select * from siswa')
     Params = <>
     Left = 96
     Top = 232
@@ -146,5 +149,227 @@ object frConnection: TfrConnection
     DataSet = ZqPoinAdmin
     Left = 464
     Top = 120
+  end
+  object fxrepRapor: TfrxReport
+    Version = '4.12.6'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45109.858238750000000000
+    ReportOptions.LastChange = 45116.089388113430000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 96
+    Top = 296
+    Datasets = <
+      item
+        DataSet = fxdsRapor
+        DataSetName = 'frxDBDataset1'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      object ReportTitle1: TfrxReportTitle
+        Height = 64.252010000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object Memo17: TfrxMemoView
+          Left = 279.685220000000000000
+          Width = 158.740260000000000000
+          Height = 52.913420000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -24
+          Font.Name = 'Arial'
+          Font.Style = []
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'LAPORAN NILAI SISWA')
+          ParentFont = False
+        end
+      end
+      object MasterData1: TfrxMasterData
+        Height = 173.858380000000000000
+        Top = 143.622140000000000000
+        Width = 718.110700000000000000
+        DataSet = fxdsRapor
+        DataSetName = 'frxDBDataset1'
+        RowCount = 0
+        object Memo1: TfrxMemoView
+          Left = 26.456710000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            'Nama: ')
+        end
+        object Memo2: TfrxMemoView
+          Left = 124.724490000000000000
+          Width = 132.283550000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            '[frxDBDataset1."nama_siswa"]')
+        end
+        object Memo3: TfrxMemoView
+          Left = 26.456710000000000000
+          Top = 22.677180000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            'NIS:')
+        end
+        object Memo4: TfrxMemoView
+          Left = 124.724490000000000000
+          Top = 22.677180000000000000
+          Width = 132.283550000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            '[frxDBDataset1."nis"]')
+        end
+        object Memo5: TfrxMemoView
+          Left = 26.456710000000000000
+          Top = 45.354360000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            'NISN:')
+        end
+        object Memo6: TfrxMemoView
+          Left = 124.724490000000000000
+          Top = 45.354360000000000000
+          Width = 132.283550000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            '[frxDBDataset1."nisn"]')
+        end
+        object Memo7: TfrxMemoView
+          Left = 26.456710000000000000
+          Top = 68.031540000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            'NIK:')
+        end
+        object Memo8: TfrxMemoView
+          Left = 124.724490000000000000
+          Top = 68.031540000000000000
+          Width = 132.283550000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            '[frxDBDataset1."nik"]')
+        end
+        object Memo9: TfrxMemoView
+          Left = 26.456710000000000000
+          Top = 90.708720000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            'Tempat Lahir:')
+        end
+        object Memo10: TfrxMemoView
+          Left = 124.724490000000000000
+          Top = 90.708720000000000000
+          Width = 132.283550000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            '[frxDBDataset1."tempat_lahir"]')
+        end
+        object Memo11: TfrxMemoView
+          Left = 26.456710000000000000
+          Top = 113.385900000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            'Tanggal Lahir:')
+        end
+        object Memo12: TfrxMemoView
+          Left = 124.724490000000000000
+          Top = 113.385900000000000000
+          Width = 132.283550000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            '[frxDBDataset1."tanggal_lahir"]')
+        end
+        object Memo13: TfrxMemoView
+          Left = 264.567100000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            'Tingkat Kelas:')
+        end
+        object Memo14: TfrxMemoView
+          Left = 362.834880000000000000
+          Width = 132.283550000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            '[frxDBDataset1."tingkat_kelas"]')
+        end
+        object Memo15: TfrxMemoView
+          Left = 264.567100000000000000
+          Top = 22.677180000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            'Jurusan:')
+        end
+        object Memo16: TfrxMemoView
+          Left = 362.834880000000000000
+          Top = 22.677180000000000000
+          Width = 132.283550000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Memo.UTF8 = (
+            '[frxDBDataset1."jurusan"]')
+        end
+      end
+      object MasterData2: TfrxMasterData
+        Height = 22.677180000000000000
+        Top = 340.157700000000000000
+        Width = 718.110700000000000000
+        DataSet = fxdsRapor
+        DataSetName = 'frxDBDataset1'
+        RowCount = 0
+      end
+    end
+  end
+  object fxdsRapor: TfrxDBDataset
+    UserName = 'frxDBDataset1'
+    CloseDataSource = False
+    DataSet = ZqSiswa
+    BCDToCurrency = False
+    Left = 32
+    Top = 296
   end
 end

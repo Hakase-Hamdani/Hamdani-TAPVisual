@@ -9,7 +9,8 @@ uses
   PasUserAdmin in 'gfrAdmin\ffrUser\PasUserAdmin.pas' {frUserAdmin},
   PasPoinAdmin in 'gfrAdmin\ffrPoin\PasPoinAdmin.pas' {frPoinAdmin},
   PasOrtuAdmin in 'gfrAdmin\ffrOrtu\PasOrtuAdmin.pas' {frOrtu},
-  pasDataDiri in 'gfrSiswa\ffrDataDiri\pasDataDiri.pas' {frDatadiri};
+  pasDataDiri in 'gfrSiswa\ffrDataDiri\pasDataDiri.pas' {frDatadiri},
+  PasLoginDebug in 'PasLoginDebug.pas' {frLoginDebug};
 
 {$R *.res}
 
@@ -23,5 +24,6 @@ begin
   Application.CreateForm(TfrPoinAdmin, frPoinAdmin);
   Application.CreateForm(TfrOrtu, frOrtu);
   Application.CreateForm(TfrDatadiri, frDatadiri);
+  Application.CreateForm(TfrLoginDebug, frLoginDebug);
   Application.Run;
 end.

@@ -1,6 +1,6 @@
 object frDatadiri: TfrDatadiri
-  Left = 446
-  Top = 213
+  Left = 223
+  Top = 238
   Width = 379
   Height = 296
   Caption = 'frDatadiri'
@@ -124,5 +124,6 @@ object frDatadiri: TfrDatadiri
     Height = 25
     Caption = 'Cetak Rapor'
     TabOrder = 6
+    OnClick = btnRepClick
   end
 end

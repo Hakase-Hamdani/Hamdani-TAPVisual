@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Grids, DBGrids;
+  Dialogs, StdCtrls, Grids, DBGrids, frxClass, frxDBSet;
 
 type
   TfrDatadiri = class(TForm)
@@ -23,6 +23,7 @@ type
     btnRep: TButton;
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure btnRepClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,6 +32,7 @@ type
 
 var
   frDatadiri: TfrDatadiri;
+  userid: string;
 
 implementation
 
@@ -50,7 +52,7 @@ end;
 
 procedure TfrDatadiri.FormActivate(Sender: TObject);
 var
-  query, userid : string;
+  query : string;
 begin
   userid := frLogin.lblId.Caption;
   edtUserId.Text := userid;
@@ -67,6 +69,20 @@ begin
   edtJur.Text := frConnection.ZqSiswa.FieldByName('jurusan').AsString;
   edtWk.Text := frConnection.ZqSiswa.FieldByName('wali_kelas').AsString;
 
+end;
+
+procedure TfrDatadiri.btnRepClick(Sender: TObject);
+begin
+  userid := frLogin.lblId.Caption;//ambil id dari caption
+  edtUserId.Text := userid; //jadikan variabel userid
+
+  frConnection.ZqSiswa.SQL.Clear;
+  frConnection.ZqSiswa.SQL.Add('SELECT * FROM siswa WHERE user_id = :userid'); //seleksi data yang sesuai dengan variabel userid
+  frConnection.ZqSiswa.ParamByName('userid').AsString := userid; //variabel userid dijadikan input berparameter
+  frConnection.ZqSiswa.Open;
+  frConnection.ZqSiswa.ExecSQL;
+
+  frConnection.fxrepRapor.ShowReport();
 end;
 
 end.
