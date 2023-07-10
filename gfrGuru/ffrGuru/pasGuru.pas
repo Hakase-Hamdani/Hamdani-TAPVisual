@@ -16,7 +16,9 @@ type
     edtMapel: TEdit;
     ffGuru: TLabel;
     edtUserId: TEdit;
-    DBGrid1: TDBGrid;
+    DbWkSiswa: TDBGrid;
+    DbWkPoin: TDBGrid;
+    DbWkRPoin: TDBGrid;
     procedure FormActivate(Sender: TObject);
   private
     { Private declarations }

@@ -1,6 +1,6 @@
 object ffrGuru: TffrGuru
-  Left = 191
-  Top = 185
+  Left = 326
+  Top = 163
   Width = 1012
   Height = 458
   Caption = 'Wali Kelas'
@@ -84,16 +84,134 @@ object ffrGuru: TffrGuru
     Text = 'edtUserId'
     Visible = False
   end
-  object DBGrid1: TDBGrid
-    Left = 312
+  object DbWkSiswa: TDBGrid
+    Left = 352
     Top = 32
-    Width = 673
+    Width = 617
     Height = 120
+    DataSource = frConnection.DsWkSiswa
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Width = 32
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nis'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nisn'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama_siswa'
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nik'
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tingkat_kelas'
+        Width = 32
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'jurusan'
+        Width = 32
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'status'
+        Visible = True
+      end>
+  end
+  object DbWkPoin: TDBGrid
+    Left = 616
+    Top = 160
+    Width = 353
+    Height = 120
+    DataSource = frConnection.DsWkPoin
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Width = 32
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'bobot'
+        Width = 32
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'jenis'
+        Visible = True
+      end>
+  end
+  object DbWkRPoin: TDBGrid
+    Left = 552
+    Top = 288
+    Width = 424
+    Height = 120
+    DataSource = frConnection.DsWkRPoin
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nama_siswa'
+        Width = 90
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tanggal'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama_poin'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'bobot'
+        Visible = True
+      end>
   end
 end

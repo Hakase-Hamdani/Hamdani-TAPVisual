@@ -1,6 +1,6 @@
 object frConnection: TfrConnection
-  Left = 498
-  Top = 175
+  Left = 326
+  Top = 369
   Width = 730
   Height = 572
   Caption = 'frConnection'
@@ -416,7 +416,10 @@ object frConnection: TfrConnection
     Connection = ZConn
     Active = True
     SQL.Strings = (
-      'SELECT * FROM riwayat_poin')
+      'SELECT s.nama_siswa, rp.tanggal, p.nama AS nama_poin, p.bobot'
+      'FROM siswa s'
+      'JOIN riwayat_poin rp ON s.id = rp.siswa_id'
+      'JOIN poin p ON rp.poin_id = p.id;')
     Params = <>
     Left = 248
     Top = 440
