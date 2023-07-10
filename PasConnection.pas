@@ -28,6 +28,15 @@ type
     DsPoinAdmin: TDataSource;
     fxrepRapor: TfrxReport;
     fxdsRapor: TfrxDBDataset;
+    GroupBox7: TGroupBox;
+    DsWaliKelas: TDataSource;
+    ZqWaliKelas: TZQuery;
+    ZqWkSiswa: TZQuery;
+    ZqWkPoin: TZQuery;
+    ZqWkRPoin: TZQuery;
+    DsWkSiswa: TDataSource;
+    DsWkPoin: TDataSource;
+    DsWkRPoin: TDataSource;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

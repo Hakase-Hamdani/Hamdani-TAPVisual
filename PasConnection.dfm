@@ -1,8 +1,8 @@
 object frConnection: TfrConnection
-  Left = 184
-  Top = 151
+  Left = 498
+  Top = 175
   Width = 730
-  Height = 432
+  Height = 572
   Caption = 'frConnection'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -24,7 +24,7 @@ object frConnection: TfrConnection
   end
   object GroupBox2: TGroupBox
     Left = 16
-    Top = 200
+    Top = 184
     Width = 185
     Height = 153
     Caption = 'Siswa'
@@ -32,24 +32,24 @@ object frConnection: TfrConnection
   end
   object GroupBox3: TGroupBox
     Left = 232
-    Top = 72
+    Top = 8
     Width = 465
-    Height = 281
+    Height = 353
     Caption = 'Admin'
     TabOrder = 2
     object GroupBox4: TGroupBox
       Left = 8
       Top = 16
       Width = 185
-      Height = 105
+      Height = 145
       Caption = 'Kelas'
       TabOrder = 0
     end
     object GroupBox5: TGroupBox
       Left = 8
-      Top = 136
+      Top = 176
       Width = 185
-      Height = 105
+      Height = 169
       Caption = 'GroupBox5'
       TabOrder = 1
     end
@@ -57,10 +57,18 @@ object frConnection: TfrConnection
       Left = 200
       Top = 16
       Width = 185
-      Height = 105
+      Height = 145
       Caption = 'Poin'
       TabOrder = 2
     end
+  end
+  object GroupBox7: TGroupBox
+    Left = 16
+    Top = 368
+    Width = 681
+    Height = 145
+    Caption = 'WaliKelas'
+    TabOrder = 3
   end
   object DsLogin: TDataSource
     DataSet = ZqLogin
@@ -83,8 +91,8 @@ object frConnection: TfrConnection
     LibraryLocation = 
       'C:\Program Files (x86)\Borland\Delphi7\Projects\Tugas Harian\Tug' +
       'asAkhirHamdaniDelphi\libmysql.dll'
-    Left = 16
-    Top = 16
+    Left = 96
+    Top = 24
   end
   object ZqLogin: TZQuery
     Connection = ZConn
@@ -97,7 +105,7 @@ object frConnection: TfrConnection
   end
   object DsSiswa: TDataSource
     Left = 32
-    Top = 232
+    Top = 200
   end
   object ZqSiswa: TZQuery
     Connection = ZConn
@@ -106,12 +114,12 @@ object frConnection: TfrConnection
       'select * from siswa')
     Params = <>
     Left = 96
-    Top = 232
+    Top = 200
   end
   object DsKelasAdmin: TDataSource
     DataSet = ZqKelasAdmin
     Left = 280
-    Top = 120
+    Top = 32
   end
   object ZqKelasAdmin: TZQuery
     Connection = ZConn
@@ -120,12 +128,12 @@ object frConnection: TfrConnection
       'SELECT * FROM kelas')
     Params = <>
     Left = 352
-    Top = 120
+    Top = 32
   end
   object DsUserAdmin: TDataSource
     DataSet = ZqUserAdmin
     Left = 272
-    Top = 240
+    Top = 216
   end
   object ZqUserAdmin: TZQuery
     Connection = ZConn
@@ -134,7 +142,7 @@ object frConnection: TfrConnection
       'SELECT * FROM user')
     Params = <>
     Left = 352
-    Top = 240
+    Top = 216
   end
   object ZqPoinAdmin: TZQuery
     Connection = ZConn
@@ -143,12 +151,12 @@ object frConnection: TfrConnection
       'SELECT * FROM poin')
     Params = <>
     Left = 552
-    Top = 120
+    Top = 32
   end
   object DsPoinAdmin: TDataSource
     DataSet = ZqPoinAdmin
     Left = 464
-    Top = 120
+    Top = 32
   end
   object fxrepRapor: TfrxReport
     Version = '4.12.6'
@@ -166,7 +174,7 @@ object frConnection: TfrConnection
       ''
       'end.')
     Left = 96
-    Top = 296
+    Top = 264
     Datasets = <
       item
         DataSet = fxdsRapor
@@ -370,6 +378,62 @@ object frConnection: TfrConnection
     DataSet = ZqSiswa
     BCDToCurrency = False
     Left = 32
-    Top = 296
+    Top = 264
+  end
+  object DsWaliKelas: TDataSource
+    DataSet = ZqWaliKelas
+    Left = 40
+    Top = 384
+  end
+  object ZqWaliKelas: TZQuery
+    Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM wali_kelas')
+    Params = <>
+    Left = 112
+    Top = 384
+  end
+  object ZqWkSiswa: TZQuery
+    Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM siswa')
+    Params = <>
+    Left = 112
+    Top = 440
+  end
+  object ZqWkPoin: TZQuery
+    Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM poin')
+    Params = <>
+    Left = 248
+    Top = 384
+  end
+  object ZqWkRPoin: TZQuery
+    Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM riwayat_poin')
+    Params = <>
+    Left = 248
+    Top = 440
+  end
+  object DsWkSiswa: TDataSource
+    DataSet = ZqWkSiswa
+    Left = 40
+    Top = 440
+  end
+  object DsWkPoin: TDataSource
+    DataSet = ZqWkPoin
+    Left = 184
+    Top = 384
+  end
+  object DsWkRPoin: TDataSource
+    DataSet = ZqWkRPoin
+    Left = 184
+    Top = 440
   end
 end

@@ -29,7 +29,7 @@ var
 implementation
 
 uses
-  PasConnection, DB, PasFrAdmin, pasDataDiri, PasLoginDebug;
+  PasConnection, DB, PasFrAdmin, pasDataDiri, PasLoginDebug, pasGuru;
 
 {$R *.dfm}
 
@@ -72,6 +72,7 @@ begin
               userid := frConnection.ZqLogin.FieldValues['id'];
               lblId.Caption := userid;
               ShowMessage('Login sebagai guru');
+              ffrGuru.ShowModal;              
             end
           else
             begin
