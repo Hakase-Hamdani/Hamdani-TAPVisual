@@ -11,13 +11,12 @@ type
     edtUserName: TEdit;
     MskPassword: TMaskEdit;
     btnLogin: TButton;
-    DbTest: TDBGrid;
     Label2: TLabel;
     Label3: TLabel;
-    Label1: TLabel;
     lblId: TLabel;
     procedure btnLoginClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,7 +29,7 @@ var
 implementation
 
 uses
-  PasConnection, DB, PasFrAdmin, pasDataDiri;
+  PasConnection, DB, PasFrAdmin, pasDataDiri, PasLoginDebug;
 
 {$R *.dfm}
 
@@ -93,6 +92,11 @@ end;
 procedure TfrLogin.FormCreate(Sender: TObject);
 begin
 Position := poScreenCenter;
+end;
+
+procedure TfrLogin.FormActivate(Sender: TObject);
+begin
+frLoginDebug.ShowModal;
 end;
 
 end.
