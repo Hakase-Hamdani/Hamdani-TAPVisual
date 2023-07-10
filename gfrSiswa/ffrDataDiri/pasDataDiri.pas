@@ -4,14 +4,26 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Grids, DBGrids;
+  Dialogs, StdCtrls, Grids, DBGrids, frxClass, frxDBSet;
 
 type
   TfrDatadiri = class(TForm)
-    mmDataDiri: TMemo;
-    DBGrid1: TDBGrid;
+    edtUserId: TEdit;
     Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    edtNm: TEdit;
+    edtNis: TEdit;
+    edtTk: TEdit;
+    edtJur: TEdit;
+    edtWk: TEdit;
+    btnRep: TButton;
     procedure FormCreate(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure btnRepClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -20,36 +32,57 @@ type
 
 var
   frDatadiri: TfrDatadiri;
+  userid: string;
 
 implementation
 
 uses
-  PasConnection, PasLogin;
+  PasConnection, PasLogin, DB;
 
 {$R *.dfm}
 
 procedure TfrDatadiri.FormCreate(Sender: TObject);
 var
-  querySiswa, queryOrtu, queryKelas:string;
-  user_idDD: integer;
+  userid : string;
 begin
-  user_idDD := PasLogin.user_id;
-  Label1.Caption := IntToStr(PasLogin.user_id);
-  querySiswa := 'SELECT * FROM siswa WHERE user_id = :user_id';
-//  ShowMessage(IntToStr(user_id));
-frConnection.ZqDataSiswa.SQL.Clear;
-frConnection.ZqDataSiswa.SQL.Add(querySiswa);
-if frConnection.ZqDataSiswa.Params.FindParam('user_id') <> nil then
-  begin
-    frConnection.ZqDataSiswa.ParamByName('user_id').AsInteger := user_idDD;
-    frConnection.ZqDataSiswa.SQL.Clear;
-    frConnection.ZqDataSiswa.SQL.Add('SELECT * FROM siswa WHERE user_id = "'+inttostr(user_idDD)+'"');
-  end
-else
-  begin
-    ShowMessage('Param is NOT found, fuck!');
-  end;
+  userid := frLogin.lblId.Caption;
+  edtUserId.Text := userid;
+  Position := poScreenCenter;
+end;
 
+procedure TfrDatadiri.FormActivate(Sender: TObject);
+var
+  query : string;
+begin
+  userid := frLogin.lblId.Caption;
+  edtUserId.Text := userid;
+
+  query := 'SELECT * FROM siswa WHERE user_id = :userid';
+  frConnection.ZqSiswa.SQL.Clear;
+  frConnection.ZqSiswa.SQL.Add(query);
+  frConnection.ZqSiswa.ParamByName('userid').AsString := userid;
+  frConnection.ZqSiswa.Open;
+
+  edtNm.Text := frConnection.ZqSiswa.FieldByName('nama_siswa').AsString;
+  edtNis.Text := frConnection.ZqSiswa.FieldByName('nis').AsString;
+  edtTk.Text := frConnection.ZqSiswa.FieldByName('tingkat_kelas').AsString;
+  edtJur.Text := frConnection.ZqSiswa.FieldByName('jurusan').AsString;
+  edtWk.Text := frConnection.ZqSiswa.FieldByName('wali_kelas').AsString;
+
+end;
+
+procedure TfrDatadiri.btnRepClick(Sender: TObject);
+begin
+  userid := frLogin.lblId.Caption;//ambil id dari caption
+  edtUserId.Text := userid; //jadikan variabel userid
+
+  frConnection.ZqSiswa.SQL.Clear;
+  frConnection.ZqSiswa.SQL.Add('SELECT * FROM siswa WHERE user_id = :userid'); //seleksi data yang sesuai dengan variabel userid
+  frConnection.ZqSiswa.ParamByName('userid').AsString := userid; //variabel userid dijadikan input berparameter
+  frConnection.ZqSiswa.Open;
+  frConnection.ZqSiswa.ExecSQL;
+
+  frConnection.fxrepRapor.ShowReport();
 end;
 
 end.

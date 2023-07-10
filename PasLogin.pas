@@ -11,12 +11,12 @@ type
     edtUserName: TEdit;
     MskPassword: TMaskEdit;
     btnLogin: TButton;
-    DbTest: TDBGrid;
     Label2: TLabel;
     Label3: TLabel;
-    Label1: TLabel;
+    lblId: TLabel;
     procedure btnLoginClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,13 +29,13 @@ var
 implementation
 
 uses
-  PasConnection, DB, PasFrAdmin;
+  PasConnection, DB, PasFrAdmin, pasDataDiri, PasLoginDebug;
 
 {$R *.dfm}
 
 procedure TfrLogin.btnLoginClick(Sender: TObject);
 var
-  nama, password, level, loginLevel, querylogin: string;
+  nama, password, level, loginLevel, querylogin, userid: string;
   sts: integer;
 begin
   //cukup jelas
@@ -62,14 +62,21 @@ begin
           loginLevel := frConnection.ZqLogin.FieldValues['level']; //ambil value dari kolom `level` sebagai string
           if (loginLevel = 'siswa') then //memeriksa loginLevel
             begin
+              userid := frConnection.ZqLogin.FieldValues['id']; //set userid berdasarkan sintaks di kanan
+              lblId.Caption := userid; //assign userid sebagai value di Label4.Caption
               ShowMessage('Login sebagai siswa');
+              frDatadiri.ShowModal;
             end
           else if (loginLevel = 'guru') then
             begin
+              userid := frConnection.ZqLogin.FieldValues['id'];
+              lblId.Caption := userid;
               ShowMessage('Login sebagai guru');
             end
           else
             begin
+              userid := frConnection.ZqLogin.FieldValues['id'];
+              lblId.Caption := userid;
               ShowMessage('Login sebagai admin');
               frAdmin.ShowModal;
             end;
@@ -85,6 +92,11 @@ end;
 procedure TfrLogin.FormCreate(Sender: TObject);
 begin
 Position := poScreenCenter;
+end;
+
+procedure TfrLogin.FormActivate(Sender: TObject);
+begin
+frLoginDebug.ShowModal;
 end;
 
 end.

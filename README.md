@@ -6,10 +6,11 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 ### Saat ini sudah sampai:
  - [x] Form login
 	 - [x] validasi level
-		- [x] need rework
+		- [x] need rework **CLEAR**
 	 - [x] validasi status
- - [ ] Form menu siswa
-	 - [ ] Form lain akan ditambahkan seiring berjalannya waktu
+ - [ ] Form siswa
+	 - [x] Form data siswa
+	 - [ ] report **IN PROGRESS**
  - [ ] Form menu guru
 	 - [ ] Form lain akan ditambahkan seiring berjalannya waktu
  - [ ] form menu admin
@@ -38,9 +39,9 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 *daftar ini belum selesai
 |Nama Form|Fungsi  |
 |---------|--------|
-|`frConnection`|	Tempat penyimpanan semua komponen `Zeos` dan `ADO/Data Access`|
+|`frConnection`|	Tempat penyimpanan semua komponen `Zeos`, `ADO/Data Access`, dan `FastReport`|
 |`frLogin`|	Form untuk login, use unit `frConnection`|
-|`frDataDiri`|bagian dari `gfrSiswa`-> `ffrDataDiri` **ON HOLD**|
+|`frDataDiri`|bagian dari `gfrSiswa`-> `ffrDataDiri`, berisi data singkat dan report **ON HOLD**|
 |`frAdmin`|bagian dari `gfrAdmin`, berfungsi sebagai panel administrasi untuk user `admin`|
 |`frKelasAdmin`|bagian dari `gfrAdmin`-> `ffrKelas`, berfungsi sebagai form CRUD data kelas untuk user `admin`|
 |`frUserAdmin`|bagian dari `gfrAdmin`-> `ffrUser`, berfungsi sebagai form CRUD data user|
@@ -51,6 +52,7 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 *daftar ini belum selesai
 |nama komponen/file|prefiks|
 |------------------|-------|
+
 |**file dfm/associated pascal file**|Pas|
 |**Folder grup form**|gfr|
 |**Folder form**|ffr|
@@ -64,6 +66,9 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 |Button|btn|
 |ComboBox|cbx|
 |Memo|mm|
+|Label|lbl|
+|frxDBDataset|fxds|
+|frxReport|fxrep|
 
 ### Akses baca/tulis
 |level user|tabel akses|hal akses|
@@ -77,7 +82,8 @@ Di buat untuk memenuhi tugas akhir mata kuliah Pemrograman Visual 2, Semester 4.
 |Nama|Keterangan|
 |--|--|
 |Zeos|Koneksi database|
+|FastReport|Report|
 
 
 
->Genuinely asking, why Delphi 7?# Hakase-Hamdani
+>Genuinely asking, why Delphi 7?
