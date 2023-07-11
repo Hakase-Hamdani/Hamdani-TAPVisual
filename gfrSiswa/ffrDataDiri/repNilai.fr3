@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Version="4.12.6" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="45109.85823875" ReportOptions.Description.Text="" ReportOptions.LastChange="45118.0269680208" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C656674026003546F7003000108446174617365747301010C2C00000020446174615365743D22667864734E696C61692220446174615365744E616D653D22667864734E696C61692200010C2C00000020446174615365743D22667864735261706F722220446174615365744E616D653D22667864735261706F72220000095661726961626C65730100055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="64.25201" Left="0" Top="18.89765" Width="718.1107">
+      <TfrxMemoView Name="Memo17" Left="279.68522" Top="0" Width="158.74026" Height="52.91342" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-24" Font.Name="Arial" Font.Style="0" HAlign="haCenter" ParentFont="False" Text="LAPORAN NILAI SISWA"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Height="173.85838" Left="0" Top="143.62214" Width="718.1107" ColumnWidth="0" ColumnGap="0" DataSet="fxdsRapor" DataSetName="fxdsRapor" RowCount="0">
+      <TfrxMemoView Name="Memo1" Left="26.45671" Top="0" Width="94.48825" Height="18.89765" ShowHint="False" Text="Nama: "/>
+      <TfrxMemoView Name="Memo2" Left="124.72449" Top="0" Width="132.28355" Height="18.89765" ShowHint="False" Text="[fxdsRapor.&#34;nama_siswa&#34;]"/>
+      <TfrxMemoView Name="Memo3" Left="26.45671" Top="22.67718" Width="94.48825" Height="18.89765" ShowHint="False" Text="NIS:"/>
+      <TfrxMemoView Name="Memo4" Left="124.72449" Top="22.67718" Width="132.28355" Height="18.89765" ShowHint="False" Text="[fxdsRapor.&#34;nis&#34;]"/>
+      <TfrxMemoView Name="Memo5" Left="26.45671" Top="45.35436" Width="94.48825" Height="18.89765" ShowHint="False" Text="NISN:"/>
+      <TfrxMemoView Name="Memo6" Left="124.72449" Top="45.35436" Width="132.28355" Height="18.89765" ShowHint="False" Text="[fxdsRapor.&#34;nisn&#34;]"/>
+      <TfrxMemoView Name="Memo7" Left="26.45671" Top="68.03154" Width="94.48825" Height="18.89765" ShowHint="False" Text="NIK:"/>
+      <TfrxMemoView Name="Memo8" Left="124.72449" Top="68.03154" Width="132.28355" Height="18.89765" ShowHint="False" Text="[fxdsRapor.&#34;nik&#34;]"/>
+      <TfrxMemoView Name="Memo9" Left="26.45671" Top="90.70872" Width="94.48825" Height="18.89765" ShowHint="False" Text="Tempat Lahir:"/>
+      <TfrxMemoView Name="Memo10" Left="124.72449" Top="90.70872" Width="132.28355" Height="18.89765" ShowHint="False" Text="[fxdsRapor.&#34;tempat_lahir&#34;]"/>
+      <TfrxMemoView Name="Memo11" Left="26.45671" Top="113.3859" Width="94.48825" Height="18.89765" ShowHint="False" Text="Tanggal Lahir:"/>
+      <TfrxMemoView Name="Memo12" Left="124.72449" Top="113.3859" Width="132.28355" Height="18.89765" ShowHint="False" Text="[fxdsRapor.&#34;tanggal_lahir&#34;]"/>
+      <TfrxMemoView Name="Memo13" Left="264.5671" Top="0" Width="94.48825" Height="18.89765" ShowHint="False" Text="Tingkat Kelas:"/>
+      <TfrxMemoView Name="Memo14" Left="362.83488" Top="0" Width="132.28355" Height="18.89765" ShowHint="False" Text="[fxdsRapor.&#34;tingkat_kelas&#34;]"/>
+      <TfrxMemoView Name="Memo15" Left="264.5671" Top="22.67718" Width="94.48825" Height="18.89765" ShowHint="False" Text="Jurusan:"/>
+      <TfrxMemoView Name="Memo16" Left="362.83488" Top="22.67718" Width="132.28355" Height="18.89765" ShowHint="False" Text="[fxdsRapor.&#34;jurusan&#34;]"/>
+    </TfrxMasterData>
+    <TfrxMasterData Name="MasterData2" Height="154.96073" Left="0" Top="385.51206" Width="718.1107" ColumnWidth="0" ColumnGap="0" DataSet="fxdsNilai" DataSetName="fxdsNilai" RowCount="1">
+      <TfrxMemoView Name="Memo20" Left="26.45671" Top="0" Width="525.35467" Height="18.89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" HAlign="haCenter" ParentFont="False" Text="[&#34;fxdsPoin.nama_poin&#34;]"/>
+      <TfrxMemoView Name="Memo21" Left="551.81138" Top="0" Width="94.48825" Height="18.89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" HAlign="haCenter" ParentFont="False" Text="[&#34;fxdsPoin.bobot&#34;]"/>
+    </TfrxMasterData>
+    <TfrxHeader Name="Header1" Height="22.67718" Left="0" Top="340.1577" Width="718.1107">
+      <TfrxMemoView Name="Memo18" Left="26.45671" Top="3.77953" Width="525.35467" Height="18.89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" HAlign="haCenter" ParentFont="False" Text="NAMA POIN"/>
+      <TfrxMemoView Name="Memo19" Left="551.81138" Top="3.77953" Width="94.48825" Height="18.89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" HAlign="haCenter" ParentFont="False" Text="BOBOT"/>
+    </TfrxHeader>
+  </TfrxReportPage>
+</TfrxReport>
