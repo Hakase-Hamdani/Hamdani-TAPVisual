@@ -1,6 +1,6 @@
 object frUserAdmin: TfrUserAdmin
   Left = 196
-  Top = 160
+  Top = 130
   Width = 509
   Height = 480
   Caption = 'frUserAdmin'

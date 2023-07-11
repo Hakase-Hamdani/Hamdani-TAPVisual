@@ -37,6 +37,9 @@ type
     DsWkSiswa: TDataSource;
     DsWkPoin: TDataSource;
     DsWkRPoin: TDataSource;
+    fxdsNilai: TfrxDBDataset;
+    ZqNilai: TZQuery;
+    DsNilai: TDataSource;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }

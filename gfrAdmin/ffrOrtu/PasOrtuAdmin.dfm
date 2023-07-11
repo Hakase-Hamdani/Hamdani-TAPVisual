@@ -1,6 +1,6 @@
 object frOrtu: TfrOrtu
-  Left = 113
-  Top = 158
+  Left = 25
+  Top = 345
   Width = 1238
   Height = 480
   Caption = 'frOrtu'

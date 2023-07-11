@@ -1,6 +1,6 @@
 object frPoinAdmin: TfrPoinAdmin
-  Left = 412
-  Top = 132
+  Left = 109
+  Top = 103
   Width = 776
   Height = 480
   Caption = 'frPoinAdmin'
@@ -160,6 +160,7 @@ object frPoinAdmin: TfrPoinAdmin
       Height = 25
       Caption = 'TAMBAH DATA'
       TabOrder = 4
+      OnClick = edtTambahClick
     end
   end
   object DBGrid1: TDBGrid
@@ -174,6 +175,7 @@ object frPoinAdmin: TfrPoinAdmin
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = DBGrid1CellClick
     Columns = <
       item
         Expanded = False

@@ -1,6 +1,6 @@
 object frKelasAdmin: TfrKelasAdmin
-  Left = 726
-  Top = 349
+  Left = 741
+  Top = 113
   Width = 525
   Height = 480
   Caption = 'frKelasAdmin'

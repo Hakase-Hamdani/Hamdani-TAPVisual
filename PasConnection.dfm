@@ -1,6 +1,6 @@
 object frConnection: TfrConnection
-  Left = 326
-  Top = 369
+  Left = 185
+  Top = 175
   Width = 730
   Height = 572
   Caption = 'frConnection'
@@ -26,7 +26,7 @@ object frConnection: TfrConnection
     Left = 16
     Top = 184
     Width = 185
-    Height = 153
+    Height = 177
     Caption = 'Siswa'
     TabOrder = 1
   end
@@ -167,18 +167,22 @@ object frConnection: TfrConnection
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45109.858238750000000000
-    ReportOptions.LastChange = 45116.089388113430000000
+    ReportOptions.LastChange = 45118.026968020800000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
     Left = 96
-    Top = 264
+    Top = 256
     Datasets = <
       item
+        DataSet = fxdsNilai
+        DataSetName = 'fxdsNilai'
+      end
+      item
         DataSet = fxdsRapor
-        DataSetName = 'frxDBDataset1'
+        DataSetName = 'fxdsRapor'
       end>
     Variables = <>
     Style = <>
@@ -219,7 +223,7 @@ object frConnection: TfrConnection
         Top = 143.622140000000000000
         Width = 718.110700000000000000
         DataSet = fxdsRapor
-        DataSetName = 'frxDBDataset1'
+        DataSetName = 'fxdsRapor'
         RowCount = 0
         object Memo1: TfrxMemoView
           Left = 26.456710000000000000
@@ -235,7 +239,7 @@ object frConnection: TfrConnection
           Height = 18.897650000000000000
           ShowHint = False
           Memo.UTF8 = (
-            '[frxDBDataset1."nama_siswa"]')
+            '[fxdsRapor."nama_siswa"]')
         end
         object Memo3: TfrxMemoView
           Left = 26.456710000000000000
@@ -253,7 +257,7 @@ object frConnection: TfrConnection
           Height = 18.897650000000000000
           ShowHint = False
           Memo.UTF8 = (
-            '[frxDBDataset1."nis"]')
+            '[fxdsRapor."nis"]')
         end
         object Memo5: TfrxMemoView
           Left = 26.456710000000000000
@@ -271,7 +275,7 @@ object frConnection: TfrConnection
           Height = 18.897650000000000000
           ShowHint = False
           Memo.UTF8 = (
-            '[frxDBDataset1."nisn"]')
+            '[fxdsRapor."nisn"]')
         end
         object Memo7: TfrxMemoView
           Left = 26.456710000000000000
@@ -289,7 +293,7 @@ object frConnection: TfrConnection
           Height = 18.897650000000000000
           ShowHint = False
           Memo.UTF8 = (
-            '[frxDBDataset1."nik"]')
+            '[fxdsRapor."nik"]')
         end
         object Memo9: TfrxMemoView
           Left = 26.456710000000000000
@@ -307,7 +311,7 @@ object frConnection: TfrConnection
           Height = 18.897650000000000000
           ShowHint = False
           Memo.UTF8 = (
-            '[frxDBDataset1."tempat_lahir"]')
+            '[fxdsRapor."tempat_lahir"]')
         end
         object Memo11: TfrxMemoView
           Left = 26.456710000000000000
@@ -325,7 +329,7 @@ object frConnection: TfrConnection
           Height = 18.897650000000000000
           ShowHint = False
           Memo.UTF8 = (
-            '[frxDBDataset1."tanggal_lahir"]')
+            '[fxdsRapor."tanggal_lahir"]')
         end
         object Memo13: TfrxMemoView
           Left = 264.567100000000000000
@@ -341,7 +345,7 @@ object frConnection: TfrConnection
           Height = 18.897650000000000000
           ShowHint = False
           Memo.UTF8 = (
-            '[frxDBDataset1."tingkat_kelas"]')
+            '[fxdsRapor."tingkat_kelas"]')
         end
         object Memo15: TfrxMemoView
           Left = 264.567100000000000000
@@ -359,26 +363,93 @@ object frConnection: TfrConnection
           Height = 18.897650000000000000
           ShowHint = False
           Memo.UTF8 = (
-            '[frxDBDataset1."jurusan"]')
+            '[fxdsRapor."jurusan"]')
         end
       end
       object MasterData2: TfrxMasterData
+        Height = 154.960730000000000000
+        Top = 385.512060000000000000
+        Width = 718.110700000000000000
+        DataSet = fxdsNilai
+        DataSetName = 'fxdsNilai'
+        RowCount = 1
+        object Memo20: TfrxMemoView
+          Left = 26.456710000000000000
+          Width = 525.354670000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '["fxdsNilai.nama_poin"]')
+          ParentFont = False
+        end
+        object Memo21: TfrxMemoView
+          Left = 551.811380000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          HAlign = haCenter
+          Memo.UTF8 = (
+            '["fxdsNilai.bobot"]')
+          ParentFont = False
+        end
+      end
+      object Header1: TfrxHeader
         Height = 22.677180000000000000
         Top = 340.157700000000000000
         Width = 718.110700000000000000
-        DataSet = fxdsRapor
-        DataSetName = 'frxDBDataset1'
-        RowCount = 0
+        object Memo18: TfrxMemoView
+          Left = 26.456710000000000000
+          Top = 3.779530000000000000
+          Width = 525.354670000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'NAMA POIN')
+          ParentFont = False
+        end
+        object Memo19: TfrxMemoView
+          Left = 551.811380000000000000
+          Top = 3.779530000000000000
+          Width = 94.488250000000000000
+          Height = 18.897650000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'BOBOT')
+          ParentFont = False
+        end
       end
     end
   end
   object fxdsRapor: TfrxDBDataset
-    UserName = 'frxDBDataset1'
+    UserName = 'fxdsRapor'
     CloseDataSource = False
     DataSet = ZqSiswa
     BCDToCurrency = False
     Left = 32
-    Top = 264
+    Top = 256
   end
   object DsWaliKelas: TDataSource
     DataSet = ZqWaliKelas
@@ -438,5 +509,30 @@ object frConnection: TfrConnection
     DataSet = ZqWkRPoin
     Left = 184
     Top = 440
+  end
+  object fxdsNilai: TfrxDBDataset
+    UserName = 'fxdsNilai'
+    CloseDataSource = False
+    DataSet = ZqNilai
+    BCDToCurrency = False
+    Left = 32
+    Top = 312
+  end
+  object ZqNilai: TZQuery
+    Connection = ZConn
+    Active = True
+    SQL.Strings = (
+      
+        'SELECT s.nama_siswa, rp.tanggal, p.nama AS nama_poin, p.bobot'#10' F' +
+        'ROM siswa s'#10' JOIN riwayat_poin rp ON s.id = rp.siswa_id'#10' JOIN po' +
+        'in p ON rp.poin_id = p.id;')
+    Params = <>
+    Left = 96
+    Top = 312
+  end
+  object DsNilai: TDataSource
+    DataSet = ZqNilai
+    Left = 152
+    Top = 312
   end
 end

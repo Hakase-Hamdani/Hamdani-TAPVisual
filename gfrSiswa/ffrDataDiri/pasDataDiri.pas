@@ -21,6 +21,7 @@ type
     edtJur: TEdit;
     edtWk: TEdit;
     btnRep: TButton;
+    DBGrid1: TDBGrid;
     procedure FormCreate(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure btnRepClick(Sender: TObject);
@@ -52,10 +53,22 @@ end;
 
 procedure TfrDatadiri.FormActivate(Sender: TObject);
 var
-  query : string;
+  query, query2 : string;
 begin
   userid := frLogin.lblId.Caption;
   edtUserId.Text := userid;
+  query2 := 'SELECT s.nama_siswa, rp.tanggal, p.nama AS nama_poin, p.bobot ' +
+         'FROM siswa s ' +
+         'JOIN riwayat_poin rp ON s.id = rp.siswa_id ' +
+         'JOIN poin p ON rp.poin_id = p.id ' +
+         'WHERE s.user_id = :userid';
+
+  frConnection.ZqSiswa.SQL.Clear;
+  frConnection.ZqSiswa.SQL.Add('SELECT * FROM siswa WHERE user_id = :userid'); //seleksi data yang sesuai dengan variabel userid
+  frConnection.ZqSiswa.ParamByName('userid').AsString := userid; //variabel userid dijadikan input berparameter
+  frConnection.ZqSiswa.Open;
+  frConnection.ZqSiswa.ExecSQL;
+
 
   query := 'SELECT * FROM siswa WHERE user_id = :userid';
   frConnection.ZqSiswa.SQL.Clear;
@@ -72,15 +85,28 @@ begin
 end;
 
 procedure TfrDatadiri.btnRepClick(Sender: TObject);
+var
+  query : string;
 begin
   userid := frLogin.lblId.Caption;//ambil id dari caption
   edtUserId.Text := userid; //jadikan variabel userid
+  query := 'SELECT s.nama_siswa, rp.tanggal, p.nama AS nama_poin, p.bobot ' +
+         'FROM siswa s ' +
+         'JOIN riwayat_poin rp ON s.id = rp.siswa_id ' +
+         'JOIN poin p ON rp.poin_id = p.id' +
+         'WHERE s.user_id = :userid';
 
-  frConnection.ZqSiswa.SQL.Clear;
+  frConnection.ZqSiswa.SQL.Clear;
   frConnection.ZqSiswa.SQL.Add('SELECT * FROM siswa WHERE user_id = :userid'); //seleksi data yang sesuai dengan variabel userid
   frConnection.ZqSiswa.ParamByName('userid').AsString := userid; //variabel userid dijadikan input berparameter
   frConnection.ZqSiswa.Open;
   frConnection.ZqSiswa.ExecSQL;
+
+  frConnection.ZqNilai.SQL.Clear;
+  frConnection.ZqNilai.SQL.Add(query); //seleksi data yang sesuai dengan variabel userid
+  frConnection.ZqSiswa.ParamByName('userid').AsString := userid;
+  frConnection.ZqNilai.Open;
+  frConnection.ZqNilai.ExecSQL;
 
   frConnection.fxrepRapor.ShowReport();
 end;

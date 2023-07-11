@@ -1,7 +1,7 @@
 object frDatadiri: TfrDatadiri
-  Left = 223
-  Top = 238
-  Width = 379
+  Left = 505
+  Top = 245
+  Width = 789
   Height = 296
   Caption = 'frDatadiri'
   Color = clBtnFace
@@ -70,7 +70,6 @@ object frDatadiri: TfrDatadiri
     Height = 21
     ReadOnly = True
     TabOrder = 0
-    Visible = False
   end
   object edtNm: TEdit
     Left = 120
@@ -125,5 +124,39 @@ object frDatadiri: TfrDatadiri
     Caption = 'Cetak Rapor'
     TabOrder = 6
     OnClick = btnRepClick
+  end
+  object DBGrid1: TDBGrid
+    Left = 352
+    Top = 40
+    Width = 393
+    Height = 120
+    DataSource = frConnection.DsNilai
+    TabOrder = 7
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nama_siswa'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tanggal'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama_poin'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'bobot'
+        Visible = True
+      end>
   end
 end
