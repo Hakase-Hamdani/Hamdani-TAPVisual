@@ -105,6 +105,7 @@ frConnection.ZqUserAdmin.SQL.Clear;
 frConnection.ZqUserAdmin.SQL.Add('INSERT INTO poin VALUES(null, "'+edtPoin.Text+'", "'+edtEdtBobot.Text+'", "'+jnsQ+'", "'+IntToStr(stsQ)+'")');
 frConnection.ZqUserAdmin.ExecSQL;
 
+
 frConnection.ZqKelasAdmin.SQL.Clear;
 frConnection.ZqKelasAdmin.SQL.Add('SELECT * FROM user');
 frConnection.ZqKelasAdmin.ExecSQL;

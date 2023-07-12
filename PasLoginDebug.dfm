@@ -41,6 +41,7 @@ object frLoginDebug: TfrLoginDebug
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = DbTestCellClick
     Columns = <
       item
         Expanded = False

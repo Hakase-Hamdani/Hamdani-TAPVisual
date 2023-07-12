@@ -1,6 +1,6 @@
 object frPoinAdmin: TfrPoinAdmin
-  Left = 109
-  Top = 103
+  Left = 374
+  Top = 198
   Width = 776
   Height = 480
   Caption = 'frPoinAdmin'

@@ -11,6 +11,7 @@ type
     Label1: TLabel;
     DbTest: TDBGrid;
     Label2: TLabel;
+    procedure DbTestCellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -22,6 +23,18 @@ var
 
 implementation
 
+uses
+  PasLogin, PasConnection;
+
 {$R *.dfm}
+
+procedure TfrLoginDebug.DbTestCellClick(Column: TColumn);
+var
+  pswd: string;
+begin
+//frLogin.edtUserName.Text := frConnection.ZqLogin.Fields[1].AsString;
+//pswd := frLogin.MskPassword.Text;
+//frConnection.ZqLogin.Fields[2].AsString := pswd;
+end;
 
 end.
